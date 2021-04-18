@@ -4,6 +4,8 @@ div.style-toggler {
     left: 1rem;
     z-index: 1;
     margin-left: 3px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
 }
 
 div.style-toggler button {
