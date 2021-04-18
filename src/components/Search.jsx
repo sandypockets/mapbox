@@ -11,6 +11,7 @@ class Search extends Component {
     }
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
@@ -19,9 +20,16 @@ class Search extends Component {
     })
   }
 
+  handleSubmit(event) {
+    event.preventDefault();
+    this.setState({
+      value: ''
+    })
+  }
+
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <input value={this.state.value} onChange={this.handleChange} placeholder='Add place...' />
       </form>
     )
