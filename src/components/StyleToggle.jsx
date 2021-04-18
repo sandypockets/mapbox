@@ -33,8 +33,14 @@ class StyleToggle extends Component {
       }
     ];
     const buttons = styles.map(style => {
+      let className = '';
+      if (style.url === this.props.app.state.style) {
+        className = 'selected';
+      }
+
       return (
         <button
+          className={className}
           onClick={() => this.setLayer(style.url)}>
           {style.name}
         </button>
@@ -44,7 +50,6 @@ class StyleToggle extends Component {
     return (
       <div className='style-toggler'>
         {buttons}
-        {this.props.app.style}
       </div>
     )
   }
