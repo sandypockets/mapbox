@@ -1,0 +1,7 @@
+div.style-toggler {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    background-color: white;
+    z-index: 2;
+}
