@@ -8,7 +8,7 @@ class Map extends Component {
   componentDidMount() {
     const app = this.props.app;
 
-    mapbox.accessToken = 'pk.eyJ1Ijoic2FuZHlwb2NrZXRzIiwiYSI6ImNrbm5jZms1aDB4engycXBkbTJ6c2E4bXkifQ.T7DFN3K9wZDhzL34McBVcQ';
+    mapbox.accessToken = 'pk.eyJ1Ijoic2FuZHlwb2NrZXRzIiwiYSI6ImNrbm5sdm51aDB3bXQydnFqamU1Y2NqOHgifQ.VeHCDQyCKv2pzp1LKUjbeg';
     const map = new mapbox.Map({
       container: 'map',
       style: app.state.style,

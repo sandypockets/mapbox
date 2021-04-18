@@ -13,28 +13,7 @@ class App extends Component {
       latitude: 43.6532,
       longitude: -79.3832,
       style: 'mapbox://styles/mapbox/dark-v9',
-      places: [
-        {
-          name: '290 Bremner Blvd',
-          latitude: 43.6426,
-          longitude: -79.3871
-        },
-        {
-          name: '290 Bremner Blvd',
-          latitude: 43.6426,
-          longitude: -79.3871
-        },
-        {
-          name: '290 Bremner Blvd',
-          latitude: 43.6426,
-          longitude: -79.3871
-        },
-        {
-          name: '290 Bremner Blvd',
-          latitude: 43.6426,
-          longitude: -79.3871
-        }
-      ]
+      places: []
     }
   }
 

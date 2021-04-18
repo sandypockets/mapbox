@@ -9,7 +9,6 @@ class Search extends Component {
       value: '',
       isLoading: false
     }
-
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -22,8 +21,27 @@ class Search extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.setState({
-      value: ''
+    const accessToken = 'pk.eyJ1Ijoic2FuZHlwb2NrZXRzIiwiYSI6ImNrbm5sdm51aDB3bXQydnFqamU1Y2NqOHgifQ.VeHCDQyCKv2pzp1LKUjbeg';
+    const searchUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${this.state.value}.json?access_token=${accessToken}`;
+
+    fetch(searchUrl).then(response => response.json()).then(data => {
+
+      console.log(data)
+      const firstResult = data.features[0].center;
+      console.log(firstResult);
+      const oldPlaces = this.props.app.state.places;
+
+      oldPlaces.push({
+        name: this.state.value,
+        longitude: firstResult[0],
+        latitude: firstResult[1]
+      })
+      this.props.app.setState({
+        places: oldPlaces
+      })
+      this.setState({
+        value: ''
+      })
     })
   }
 
