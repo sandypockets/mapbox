@@ -15,4 +15,4 @@ const getIpAndLocation = () => {
     }).catch((err) => console.error(err))
 }
 
-getIpAndLocation()
+export default getIpAndLocation;
