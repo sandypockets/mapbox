@@ -8,7 +8,8 @@ class Map extends Component {
     mapbox.accessToken = 'pk.eyJ1Ijoic2FuZHlwb2NrZXRzIiwiYSI6ImNrbm5jZms1aDB4engycXBkbTJ6c2E4bXkifQ.T7DFN3K9wZDhzL34McBVcQ';
     var map = new mapbox.Map({
       container: 'map',
-      style: 'mapbox://styles/mapbox/dark-v10'
+      style: 'mapbox://styles/mapbox/dark-v10',
+      center: []
     });
   }
 
