@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './App.css';
+import './styles/App.css';
 import Map from './components/Map.jsx';
 import StyleToggle from "./components/StyleToggle";
 
