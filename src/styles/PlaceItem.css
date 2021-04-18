@@ -1,0 +1,9 @@
+div .place-item {
+    background-color: white;
+    padding: 5px 10px 5px 10px;
+    font-size: 14px;
+}
+
+div .place-item:hover {
+    background-color: #fffeee;
+}
