@@ -3,7 +3,7 @@ div.style-toggler {
     top: 1rem;
     left: 1rem;
     z-index: 1;
-    padding-top: 50px;
+    margin-left: 3px;
 }
 
 div.style-toggler button {
