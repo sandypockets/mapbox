@@ -1,6 +1,6 @@
 # Mapbox
 Visually discover new places around the world.
-Mapbox was built with React, using the Mapbox API. Users can explore a global map, search for addresses, and drop pins. 
+Mapbox was built with React, using the [Mapbox API](https://docs.mapbox.com/). Users can explore a global map, search for addresses, and drop pins. 
 
 ## Getting Started
 
