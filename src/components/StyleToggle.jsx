@@ -32,7 +32,7 @@ class StyleToggle extends Component {
         url: 'mapbox://styles/mapbox/light-v10'
       }
     ];
-    const buttons = styles.map(style => {
+    const buttons = styles.map((style, index) => {
       let className = '';
       if (style.url === this.props.app.state.style) {
         className = 'selected';
@@ -41,6 +41,7 @@ class StyleToggle extends Component {
       return (
         <button
           className={className}
+          key={index}
           onClick={() => this.setLayer(style.url)}>
           {style.name}
         </button>
