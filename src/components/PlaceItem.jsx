@@ -8,7 +8,10 @@ class PlaceItem extends Component {
     const app = this.props.app;
     const map = app.state.map;
     const place = this.props.place;
-    map.panTo([place.longitude, place.latitude], {duration: 2000})
+    map.flyTo({
+      center: [place.longitude, place.latitude],
+      zoom: 16
+    })
   }
 
 
