@@ -3,7 +3,6 @@ import mapbox from 'mapbox-gl';
 import '../styles/PlaceItem.css';
 
 class PlaceItem extends Component {
-
   goTo() {
     const app = this.props.app;
     const map = app.state.map;
@@ -13,7 +12,6 @@ class PlaceItem extends Component {
       zoom: 16
     })
   }
-
 
   render() {
     const app = this.props.app;
