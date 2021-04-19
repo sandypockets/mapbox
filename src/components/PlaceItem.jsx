@@ -3,6 +3,15 @@ import mapbox from 'mapbox-gl';
 import '../styles/PlaceItem.css';
 
 class PlaceItem extends Component {
+
+  goTo() {
+    const app = this.props.app;
+    const map = app.state.map;
+    const place = this.props.place;
+    map.panTo([place.longitude, place.latitude], {duration: 2000})
+  }
+
+
   render() {
     const app = this.props.app;
     const map = app.state.map;
@@ -15,7 +24,9 @@ class PlaceItem extends Component {
       });
       popup.setHTML(place.title);
       const marker = new mapbox.Marker({
-        color: '#2727e6'
+        color: '#2727e6',
+        draggable: true,
+
       });
       marker.setLngLat([place.longitude, place.latitude]);
       marker.setPopup(popup);
@@ -23,7 +34,7 @@ class PlaceItem extends Component {
     }
 
     return(
-      <div className='place-item'>
+      <div className='place-item' onClick={() => this.goTo()}>
         {place.name} ({place.latitude}, {place.longitude})
       </div>
     )
