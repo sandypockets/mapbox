@@ -27,14 +27,15 @@ class Search extends Component {
     fetch(searchUrl).then(response => response.json()).then(data => {
 
       console.log(data)
-      const firstResult = data.features[0].center;
+      const firstResult = data.features[0];
       console.log(firstResult);
       const oldPlaces = this.props.app.state.places;
 
       oldPlaces.push({
         name: this.state.value,
-        longitude: firstResult[0],
-        latitude: firstResult[1]
+        longitude: firstResult.center[0],
+        latitude: firstResult.center[1],
+        title: firstResult['place_name']
       })
       this.props.app.setState({
         places: oldPlaces
